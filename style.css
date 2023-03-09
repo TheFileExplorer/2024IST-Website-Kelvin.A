@@ -1,6 +1,7 @@
 DIV {
 border: 1px solid #000;
 }
+
 #Header {
 height: 100px;
 width: 800px;
@@ -15,3 +16,24 @@ width: 800px;
 margin-right: auto;
 margin-left: auto;
 }
+
+#Footer {
+	width: 820px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 50px;
+	border: 1px solid #fff;
+}
+
+#FooterLeft {
+	float: left;
+	width: 399px; /*49.5%*/
+	height:50px;
+	border: 1px solid green;
+}
+
+#FooterRight {
+	float:right;
+	width:399px; /*49.5%*/
+	height:50px;
+	border: 1px solid red;
