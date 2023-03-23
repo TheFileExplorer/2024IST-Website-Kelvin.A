@@ -18,7 +18,7 @@ margin-left: auto;
 }
 
 #Footer {
-	width: 820px;
+	width: 802px;
 	margin-right: auto;
 	margin-left: auto;
 	height: 50px;
@@ -42,7 +42,7 @@ margin-left: auto;
 .button-container {
 	display: flex;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 10vh;
 	justify-content: center;
 	align-items: center;
 }
@@ -64,11 +64,47 @@ margin-left: auto;
 }
 
 .button-1 {
-	color: #FFCE00;
-	border: 3px solid #FFCE00
+	position: relative;
 }
 
-.button-1:hover {
-	color: #FFF;
-	background-color: #FFCE00;
+.button:after, .button:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	transition: all 0.4s, opacity 0.1s 0.4s;
+	opacity: 0;
 }
+
+.button-1:after {
+	bottom: 0;
+	right: 0;
+	border-bottom: 3px solid #212121;
+	border-right: 3px solid #212121;
+}
+
+.button-1:before {
+	top: 0;
+	left: 0;
+	border-left: 3px solid #212121;
+	border-top: 3px solid #212121;
+}
+
+.button-1:hover:after, .button:hover:before{
+	width:100%;
+	height: 100%;
+	transition: 0.4s, opacity 0.1s;
+	opacity: 1;
+}
+
+.button-2 {
+	color: #FE4880;
+	border: 3px solid #FE4880;
+	background-image: linear-gradient(to right, transparent 50%, #FE4880 50%);
+	background-size: 200%;
+	background-position: 0%;
+ }
+ 
+ .button-2:hover {
+	 color: #fff;
+	 background-position: 100%;
